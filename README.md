@@ -19,4 +19,4 @@ Given that it is an opinionated topic, discussion is encouraged and there will b
 There will be some technical topics discussed, but I'll try to cover a wide spectrum, so there'll be something for everyone.
 
 The slideshow was built using [Remark](http://remarkjs.com) and is available for viewing at http://awochna.github.io/polyglot-developer.
-The source code is available at http://awochna.github.io/polyglot-developer.
+The source code is available at https://github.com/awochna/polyglot-developer.
