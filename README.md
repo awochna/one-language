@@ -2,7 +2,7 @@
 
 ## Branching out and diversifying ##
 
-This repository is holds the slides to a presentation given to the [UA Web Developer's Group](http://uaweb.arizona.edu/) on 2015-08-12.
+This repository holds the slides to a presentation given to the [UA Web Developer's Group](http://uaweb.arizona.edu/) on 2015-08-12.
 
 The University of Arizona web development scene concentrates a lot on using Drupal and PHP to solve a lot of the web problems we have.
 This isn't a bad thing, these solutions were chosen for a reason.
