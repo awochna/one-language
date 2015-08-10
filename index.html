@@ -77,6 +77,60 @@
 
       * And more, of course, this is just a list of the ones I could come up with off the top of my head.
 
+      ---
+
+      name: agenda
+
+      # Agenda #
+
+      1. Purpose of this presentation
+
+      2. Why do we use what we use now?
+
+      3. Taking a look at some languages
+
+      4. Taking a look at some tools
+
+      5. Looking at a really small website project (case study)
+
+      ---
+
+      name: purpose
+
+      # Purpose of this presentation #
+
+      * When you need to solve a problem, you want to use the right tool, no?
+
+      --
+
+      * We use great technologies to solve a wide variety of problems (i.e. Drupal)
+
+      ???
+
+      * And there's a good reason for it. We'll get into that later.
+
+      --
+
+      * However, there are some problems that our normal solutions may not be well fit for.
+
+      --
+
+        * Drupal can be used to build a simple 5 page static site for someone's grant, but it's overkill.
+
+      ???
+
+      * We'll take a look at an example solution later in the presentation
+
+      --
+
+        * Drupal can power sites with complex forms and workflows for collecting student input and graduation requirements. This can also introduce a lot of complexity that a custom app could handle better.
+
+      ???
+
+      * We actually have a site like this at MEZCOPH.
+
+      * The other day, actually, I was trying to explain to my supervisor how part of this works. This site of ours uses the Shibboleth Drupal module to log students in so we can have access to some basic user information in forms like their Exit Survey. We store that data in their user profile with Profile2 and some rules configuration. But, the profile isn't created for new users who log in using Shibboleth because the Shibboleth Drupal module skips all of the normal user creation and log in hooks.
+
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
     <script>
