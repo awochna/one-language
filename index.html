@@ -99,23 +99,23 @@
 
       # Purpose of this presentation #
 
-      * When you need to solve a problem, you want to use the right tool, no?
+      When you need to solve a problem, you want to use the right tool, no?
 
       --
 
-      * We use great technologies to solve a wide variety of problems (i.e. Drupal)
+      We use great technologies to solve a wide variety of problems (i.e. Drupal)
 
       ???
 
-      * And there's a good reason for it. We'll get into that later.
+      And there's a good reason for it. We'll get into that later.
 
       --
 
-      * However, there are some problems that our normal solutions may not be well fit for.
+      However, there are some problems that our normal solutions may not be well fit for.
 
       --
 
-        * Drupal can be used to build a simple 5 page static site for someone's grant, but it's overkill.
+      * Drupal can be used to build a simple 5 page static site for someone's grant, but it's overkill.
 
       ???
 
@@ -123,13 +123,78 @@
 
       --
 
-        * Drupal can power sites with complex forms and workflows for collecting student input and graduation requirements. This can also introduce a lot of complexity that a custom app could handle better.
+      * Drupal can power sites with complex forms and workflows for collecting student input and graduation requirements. This can also introduce a lot of complexity that a custom app could handle better.
 
       ???
 
-      * We actually have a site like this at MEZCOPH.
+      We actually have a site like this at MEZCOPH.
 
-      * The other day, actually, I was trying to explain to my supervisor how part of this works. This site of ours uses the Shibboleth Drupal module to log students in so we can have access to some basic user information in forms like their Exit Survey. We store that data in their user profile with Profile2 and some rules configuration. But, the profile isn't created for new users who log in using Shibboleth because the Shibboleth Drupal module skips all of the normal user creation and log in hooks.
+      The other day, actually, I was trying to explain to my supervisor how part of this works. This site of ours uses the Shibboleth Drupal module to log students in so we can have access to some basic user information in forms like their Exit Survey. We store that data in their user profile with Profile2 and some rules configuration. But, the profile isn't created for new users who log in using Shibboleth because the Shibboleth Drupal module skips all of the normal user creation and log in hooks.
+
+      ---
+
+      name: purpose-cont
+
+      # Purpose of this presentation #
+
+      What does polyglot developer mean?
+
+      ???
+
+      * Generally, it refers to a developer who uses multiple languages to create software solutions, using the strengths of each.
+
+      --
+
+      * In this case, I'm using it to mean a developer who uses the right tool for the job, no matter what it's written in.
+
+      --
+
+      * You may be already on this path by adopting Sass (SCSS) to help you manage your stylesheets.
+
+      ---
+
+      name: evaluating-tools
+
+      # Evaluating tools #
+
+      There are simply too many options. How do you classify them?
+
+      ???
+
+      * The way I've looked at tools, they can supplement functionality you're already using, or offer a replacement for a tool you are already using.
+      * There are a few different types of tools we can find:
+
+      --
+
+      * *Supplemental tools* help you solve the problem, but aren't the solution.
+      
+        * Less, svn, TextMate, etc.
+
+      ???
+
+      * Then we have replacement tools. These can be further divided into 2 more categories.
+
+      --
+
+      * *Drop-in replacements* are very similar to a solution you are already using.
+
+        * Wordpress in place of Drupal, Less instead of Sass, etc.
+
+      ???
+
+      * These are the ones you want to avoid using. They will take time to learn and give you a marginal level of benefit.
+
+      --
+
+      * *Edge-case or use-case replacements* are similar to a solution you are using, but handle your particular use case better.
+
+        * Jekyll instead of Drupal for small, static sites.
+
+      ???
+
+      * Reminder: We'll get to Jekyll in the case study
+
+      ---
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
