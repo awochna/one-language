@@ -4,11 +4,15 @@
 }
 
 .remark-slide-content {
-  font-size: 26px;
+  font-size: 20px;
   background-color: #333;
   color: #fff;
 }
 
 h1 {
   color: #33bfed;
+}
+
+a, a:visited {
+  color: #eee;
 }
