@@ -59,6 +59,10 @@
 
       * I also do Linux server administration.
 
+      ???
+
+      * So between those, I do everything from helping people format their HTML properly and updating a page, to site building and design, custom module development, and managing server logs and services.
+
       --
 
       Other tools:
@@ -92,13 +96,11 @@
 
       2. How should we evaluate tools?
 
-      3. Why do we use what we use now?
+      3. Taking a look at some languages
 
-      4. Taking a look at some languages
+      4. Taking a look at some tools
 
-      5. Taking a look at some tools
-
-      6. Looking at a really small website project (case study)
+      5. Looking at a really small website project (deeper dive)
 
       ---
 
@@ -118,25 +120,7 @@
 
       --
 
-      However, there are some problems that our normal solutions may not be well fit for.
-
-      --
-
-      * Drupal can be used to build a simple 5 page static site for someone's grant, but it's overkill.
-
-      ???
-
-      * We'll take a look at an example solution later in the presentation
-
-      --
-
-      * Drupal can power sites with complex forms and workflows for collecting student input and graduation requirements. This can also introduce a lot of complexity that a custom app could handle better.
-
-      ???
-
-      We actually have a site like this at MEZCOPH.
-
-      The other day, actually, I was trying to explain to my supervisor how part of this works. This site of ours uses the Shibboleth Drupal module to log students in so we can have access to some basic user information in forms like their Exit Survey. We store that data in their user profile with Profile2 and some rules configuration. But, the profile isn't created for new users who log in using Shibboleth because the Shibboleth Drupal module skips all of the normal user creation and log in hooks.
+      However, there are some problems that our normal solutions may not be well fit for, typically edge cases, but sometimes our jobs evolve that way.
 
       ---
 
@@ -156,7 +140,7 @@
 
       --
 
-      * You may be already on this path by adopting Sass (SCSS) to help you manage your stylesheets.
+      * Example: You may be already on this path by adopting Sass (SCSS) to help you manage your stylesheets.
 
       ---
 
@@ -175,7 +159,7 @@
 
       * *Supplemental tools* help you solve the problem, but aren't the solution.
       
-        * Less, svn, TextMate, etc.
+        * Less, git, TextMate, etc.
 
       ???
 
@@ -251,25 +235,186 @@
 
       ---
 
-      name: why-tools
+      name: languages-1
 
-      # Why do we use the tools we do? #
-
-      It's a bad idea to dismiss the tools that are popular now with the idea that they're 'old' or 'not cool.'
+      # Lets look at some languages #
 
       --
 
-      Previous tools were chosen after careful evaluation.
+      More specifically, let's evaluate:
+
+      --
+
+      * PHP
+
+      * Python
+
+      * Ruby
+
+      * Javascript (node)
+
+      * Go
+
+      --
+
+      We won't talk about the attributes previously listed, but instead, we'll discuss their strengths and weaknesses.
+
+      ---
+      
+      name: php
+
+      # PHP #
+
+      _You can program websites, too!_
+
+      Is known for:
+
+      --
+
+      * Being easy and accessible to new programmers and developers. However, language design issues are counterproductive to learners.
+
+        * See: http://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/ for more info.
 
       ???
 
-      * We can bet that the same process that I just described is similar to what people went through to standardize any tool in any organization.
+      * Some functions are snake_case, others camelCase. Object Oriented Programming features feel Java-like while Procedural Programming features feel C, etc.
+      
+      --
+
+      * Being ubiquitous. However, some shared hosts don't update their PHP versions.
+      
+      --
+
+      * Focusing strongly on solving web problems. Consequently, it's hard to use PHP for more 'general purpose' things, like command line tools.
 
       --
 
-      For example:
+      * Developers from other languages have a hard time getting over PHP's history.
 
       --
+
+      * **Good News**: Good tools built in PHP will try to alleviate and abstract these pains away from you. Except the developers from other languages.
+
+      --
+
+      **Note**: Facebook is written in PHP. At that scale, PHP's performance becomes a major issue, but Facebook is too big to be rewritten. As a result, they created their own PHP JIT (Just In Time) compiler, hhvm: http://hhvm.com
+
+      ???
+
+      So, in short, PHP is good for:
+
+      * Web development
+
+      * Ease of deployment
+
+      * Non-developers
+
+      * As a platform for other tools (Drupal, Wordpress, etc.)
+
+      And not so good for:
+
+      * Non-web development
+
+      * Really complex programming problems (frameworks can help here)
+
+      
+      ---
+
+      name: python
+
+      # Python #
+
+      _There should be one-- and preferably only one --obvious way to do it._
+
+      Is known for:
+
+      --
+
+      * Being really easy to learn general programming with. It doesn't have a lot of the language design issues PHP suffers from.
+
+      --
+
+      * It's widely used in the Academic and Scientific communities. As a result, there are really good libraries for really cool things, like machine learning, hard core number crunching, etc.
+
+      --
+
+      * Clean syntax. Aesthetics matter!
+
+      --
+
+      * A huge backwards-incompatible change moving from Python 2 to Python 3.
+
+      ???
+
+      * Just like in Drupal when D7 came out, it took the community awhile to port or rewrite their libraries to Python 3 syntax, causing it to schism.
+
+      --
+
+      * It can be run on the Java Virtual Machine (JVM) via Jython: http://www.jython.org/
+
+      ---
+
+      name: ruby
+
+      # Ruby #
+
+      _Optimized for developer happiness_
+
+      Is known for:
+
+      --
+
+      * Elegant and extendable syntax that makes creating a Domain Specific Language a breeze. This makes learning harder, as a result.
+
+      --
+
+      * Being extremely object oriented. PHP's basic types are implemented as objects in Ruby.
+
+      --
+
+      * Surging in popularity because of Ruby on Rails. Now that 'cooler' things have come along, some developers in other languages think it'll slowly fade away.
+
+      --
+
+      * The community places a high value on automated tests. This can be good or bad depending on your personal values.
+
+      --
+
+      * It can also run on the JVM: http://jruby.org/
+
+      ---
+
+      name: tools
+
+      # Tools #
+
+      We'll take a look at:
+
+      --
+
+      * Drupal
+
+      --
+
+      * Sass
+
+      --
+
+      * Selenium IDE
+
+      --
+
+      * Express
+
+      --
+
+      * Jekyll
+
+      ---
+
+      name: drupal-1
+
+      # Drupal #
 
       * Drupal is very secure.
 
@@ -293,11 +438,23 @@
 
       * Historically, developers don't often get into system administration. Drupal only requires a LAMP stack with minimal configuration. Unless you're deploying a static HTML site, it can't get much easier.
 
-      ---
+      --
 
-      name: drupal-flaws
+      * Drupal can be used to build a simple 5 page static site for someone's grant, but it's overkill.
 
-      # Drupal has it's flaws #
+      ???
+
+      * We'll take a look at an example solution later in the presentation
+
+      --
+
+      * Drupal can power sites with complex forms and workflows for collecting student input and graduation requirements. This can also introduce a lot of complexity that a custom app could handle better.
+
+      ???
+
+      We actually have a site like this at MEZCOPH.
+
+      --
 
       Drupal isn't perfect for every situation though.
 
@@ -312,76 +469,6 @@
       --
 
       * Drupal is overkill for really small, really static sites.
-
-      ---
-
-      name: languages-1
-
-      # Lets look at some languages #
-
-      --
-
-      Namely
-
-      --
-
-      * PHP
-
-      * Python
-
-      * Ruby
-
-      * Javascript
-
-      --
-
-      We'll be evaluating for server-side use.
-
-      ---
-      
-      name: php-pros
-
-      # PHP #
-      
-      For those interested, PHP is one of the languages implemented in C.
-
-      --
-
-      Pros
-
-      --
-
-      * PHP has been around since 1995, 20 years ago! (Maturity)
-
-      --
-
-      * PHP's documentation is good and if it doesn't have the answer you're looking for, Google probably does (Documentation)
-
-      --
-
-      * The PHP community loves the fact that it is accessible to beginners and, until recently, was probably the most accessible server-side web programming language, thanks to server-side javascript. There are also a **ton** of books to help you learn. (Tutorials and learning resources; community and values)
-
-      ---
-
-      name: php-cons
-
-      # PHP #
-
-      For those interested, PHP is one of the languages implemented in C.
-
-      Cons
-
-      --
-
-      * PHP has an code style guide, but not really a file structure convention/guide. You get to pick it your own and every project has differing opinions. (Conventions/Style Guides)
-
-      ???
-
-      * For instance, Drupal has everything route through index.php at the root level, but Moodle has different files for different pages/tasks and handles a lot of things through query parameters.
-
-      --
-
-      * PHP's ecosystem is starting to catch up with the use of Composer. Before compose was PEAR and people tried to avoid using PEAR as much as possible. PHP had plenty of libraries to handle complex problems for you, but managing them became a pain. (Ecosystem)
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
