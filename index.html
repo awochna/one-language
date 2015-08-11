@@ -85,13 +85,15 @@
 
       1. Purpose of this presentation
 
-      2. Why do we use what we use now?
+      2. How should we evaluate tools?
 
-      3. Taking a look at some languages
+      3. Why do we use what we use now?
 
-      4. Taking a look at some tools
+      4. Taking a look at some languages
 
-      5. Looking at a really small website project (case study)
+      5. Taking a look at some tools
+
+      6. Looking at a really small website project (case study)
 
       ---
 
@@ -195,6 +197,186 @@
       * Reminder: We'll get to Jekyll in the case study
 
       ---
+
+      name: what-to-judge
+
+      # What to judge about them? #
+
+      When you're evaluating a new tool, what pieces of information do you want to pay attention to?
+
+      --
+
+      * Maturity (Check out bug reports)
+
+      ???
+
+      * Project maturity is important. This should not be taken to mean how old the project is, though. Instead, check out the bug reports and go through a couple of them. If the bugs seem major, like something you could see yourself running into pretty quickly, it's not ready.
+
+      --
+
+      * Documentation (If you can't find them, it's a bad sign)
+
+      ???
+
+      * Project maturity can be forgiven to some degree given sufficient documentation. Documentation can also never be too in-depth. As you get more and more familiar with a tool, you want lower level documentation.
+
+      --
+
+      * Conventions/Style Guides (If they don't have one, it's also a bad sign)
+
+      ???
+
+      * Conventions don't have to be explicitly stated. If you need to add an arbitrary file to your project, you should be able figure out where to put it, either intuitively or because a google search should yield a result. If it's 'up to you', make sure to pick a system and stick with it, then document it.
+
+      --
+
+      * Tutorials and learning resources (You don't need too many, but too few hurts)
+
+      --
+
+      * Community and it's values (You kind of have to just jump in and find out)
+
+      ???
+
+      * Community can make or break your experience with a tool. An unwelcoming or dismissive community will be hard to work in when you have questions or want to contribute back to the project. I can't say I've ever seen a *bad* community, but some communities will value different things differently.
+
+      --
+
+      * Ecosystem
+
+      ---
+
+      name: why-tools
+
+      # Why do we use the tools we do? #
+
+      It's a bad idea to dismiss the tools that are popular now with the idea that they're 'old' or 'not cool.'
+
+      --
+
+      Previous tools were chosen after careful evaluation.
+
+      ???
+
+      * We can bet that the same process that I just described is similar to what people went through to standardize any tool in any organization.
+
+      --
+
+      For example:
+
+      --
+
+      * Drupal is very secure.
+
+      ???
+
+      * Given our position as a higher learning institute, hacks, defacement, and security breaches are particularly harsh on us in the public's view. Drupal makes security really easy.
+
+      --
+
+      * Drupal is flexible, extensible, and modular.
+
+      ???
+
+      * With the ecosystem of open-source modules, you can build almost anything you can imagine. Anything that gets too complex using contributed modules can be built in a custom module and redistributed to other sites that may need the same functionality.
+
+      --
+
+      * Drupal is easy to deploy.
+
+      ???
+
+      * Historically, developers don't often get into system administration. Drupal only requires a LAMP stack with minimal configuration. Unless you're deploying a static HTML site, it can't get much easier.
+
+      ---
+
+      name: drupal-flaws
+
+      # Drupal has it's flaws #
+
+      Drupal isn't perfect for every situation though.
+
+      --
+
+      * Extremely complicated sites will become too hard to maintain with contributed modules alone. You'll have to build your own. Building multiple inter-dependent custom modules can start to result in many, many, many lines of code, capping development speed.
+
+      --
+
+      * Deployment is easy, but developing new features on a separate instance of the site and pushing them to the production instance becomes difficult and unwieldy. (They're working on fixing this, though!)
+
+      --
+
+      * Drupal is overkill for really small, really static sites.
+
+      ---
+
+      name: languages-1
+
+      # Lets look at some languages #
+
+      --
+
+      Namely
+
+      --
+
+      * PHP
+
+      * Python
+
+      * Ruby
+
+      * Javascript
+
+      --
+
+      We'll be evaluating for server-side use.
+
+      ---
+      
+      name: php-pros
+
+      # PHP #
+      
+      For those interested, PHP is one of the languages implemented in C.
+
+      --
+
+      Pros
+
+      --
+
+      * PHP has been around since 1995, 20 years ago! (Maturity)
+
+      --
+
+      * PHP's documentation is good and if it doesn't have the answer you're looking for, Google probably does (Documentation)
+
+      --
+
+      * The PHP community loves the fact that it is accessible to beginners and, until recently, was probably the most accessible server-side web programming language, thanks to server-side javascript. There are also a **ton** of books to help you learn. (Tutorials and learning resources; community and values)
+
+      ---
+
+      name: php-cons
+
+      # PHP #
+
+      For those interested, PHP is one of the languages implemented in C.
+
+      Cons
+
+      --
+
+      * PHP has an code style guide, but not really a file structure convention/guide. You get to pick it your own and every project has differing opinions. (Conventions/Style Guides)
+
+      ???
+
+      * For instance, Drupal has everything route through index.php at the root level, but Moodle has different files for different pages/tasks and handles a lot of things through query parameters.
+
+      --
+
+      * PHP's ecosystem is starting to catch up with the use of Composer. Before compose was PEAR and people tried to avoid using PEAR as much as possible. PHP had plenty of libraries to handle complex problems for you, but managing them became a pain. (Ecosystem)
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
