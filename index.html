@@ -338,7 +338,7 @@
 
       --
 
-      * Clean syntax. Aesthetics matter!
+      * Clean syntax. Aesthetics matter! Bonus points for an official style guide: https://www.python.org/dev/peps/pep-0008/
 
       --
 
@@ -384,6 +384,82 @@
 
       ---
 
+      name: node
+
+      # Javascript (node) #
+
+      _Non-blocking input/output model_
+
+      Is known for:
+
+      --
+
+      * Letting a full stack developer work in a single language on the front and back end. This is often debated as a blessing and a curse.
+
+      --
+
+      * The non-blocking input/output model is really cool and gives the illusion of concurrent programming in a single thread, but it isn't true concurrency.
+
+      --
+
+      * For being new to server-side programming, it gave a good dependency management solution really quickly (npm).
+
+      ???
+
+      * As compared to the PEAR project in PHP. Thankfully, Composer aims to change this.
+
+      --
+
+      * It's popularity is almost literally exploding. For example, npm was made in 2009 (6 years ago) and has 173,681 packages (as of 2015-08-11). Check out http://www.modulecounts.com to see the ridiculous curve.
+
+      --
+
+      * It's callback model can get a little out of hand, creating [callback hell](http://callbackhell.com).
+
+      --
+
+      * When combined with [Express](http://expressjs.com), you can build a simple API application easily and quickly.
+
+      ---
+
+      name: go
+
+      # Go #
+
+      _Try searching for go-lang instead_
+
+      Is known for:
+
+      --
+
+      * Being lower level than any language discussed so far.
+
+      --
+
+      * Compiles to binary, so it's very similar to C, but with modern language features
+
+      --
+
+      * **Really** good concurrency.
+
+      --
+
+      * Being made a Google. Naturally people have differing opinions on this.
+
+      --
+
+      * Having a small language footprint, makes it easier to learn, but it has enough in the standard library to handle a lot of situations.
+
+      --
+
+      * Being *really* fast.
+
+      --
+
+      If you want to try a tool in Go, check out [GoBench](https://github.com/cmpxchg16/gobench) for benchmarking website performance.
+
+      ---
+
       name: tools
 
       # Tools #
@@ -412,11 +488,17 @@
 
       ---
 
-      name: drupal-1
+      name: drupal
 
       # Drupal #
 
-      * Drupal is very secure.
+      _There's a hook for that._
+
+      Is known for:
+
+      --
+
+      * Being very secure.
 
       ???
 
@@ -424,15 +506,17 @@
 
       --
 
-      * Drupal is flexible, extensible, and modular.
+      * Being really flexible, extensible, and modular. Bonus points for having a large module ecosystem.
 
       ???
 
       * With the ecosystem of open-source modules, you can build almost anything you can imagine. Anything that gets too complex using contributed modules can be built in a custom module and redistributed to other sites that may need the same functionality.
 
+      * And being free is a big deal here. I remember looking at Wordpress and Joomla (also in PHP, competitors to Drupal) a few years ago and being suprised that there were plugins and extensions that you had to *pay* for.
+
       --
 
-      * Drupal is easy to deploy.
+      * Being easy to deploy.
 
       ???
 
@@ -440,7 +524,7 @@
 
       --
 
-      * Drupal can be used to build a simple 5 page static site for someone's grant, but it's overkill.
+      * Can be used to build a simple 5 page static site for someone's grant, but it's overkill having user accounts, running cron, dynamically caching pages, checking permissions to view the page, etc.
 
       ???
 
@@ -448,7 +532,7 @@
 
       --
 
-      * Drupal can power sites with complex forms and workflows for collecting student input and graduation requirements. This can also introduce a lot of complexity that a custom app could handle better.
+      * It can also power sites with complex forms and workflows for collecting student input and graduation requirements. This can also introduce a lot of complexity that a custom app could handle better.
 
       ???
 
@@ -456,19 +540,184 @@
 
       --
 
-      Drupal isn't perfect for every situation though.
+      * Subject to *Drupalisms*, or quirks Drupal has that would not make sense to someone not familiar with Drupal.
+
+      ---
+
+      name: sass
+
+      # Sass #
+
+      _Hey, you can **nest** CSS selectors!_
+
+      Sass is a CSS preprocessor implemented in Ruby.
 
       --
 
-      * Extremely complicated sites will become too hard to maintain with contributed modules alone. You'll have to build your own. Building multiple inter-dependent custom modules can start to result in many, many, many lines of code, capping development speed.
+      It actually implements 2 syntax sets. The more common one is called SCSS and is a CSS superset.
+
+      ???
+
+      * Basically every valid CSS file is also a valid SCSS file.
+
+      * It also means you can install Sass in your project and make changes to your existing project incrementally.
 
       --
 
-      * Deployment is easy, but developing new features on a separate instance of the site and pushing them to the production instance becomes difficult and unwieldy. (They're working on fixing this, though!)
+      It implements features you wish CSS had (and may have in the future) including:
 
       --
 
-      * Drupal is overkill for really small, really static sites.
+      * Nestable selectors
+
+      --
+
+      * Variables
+
+      --
+
+      * Functions and mixins
+
+      --
+
+      * Partial files and include functionality
+
+      --
+
+      Check out http://sass-lang.com for more information!
+
+      ---
+
+      name: selenium
+
+      # Selenium IDE #
+
+      _Record and play back browser macros_
+
+      Selenium IDE is a browser automation and testing tool implemented as a Firefox extension.
+
+      --
+
+      If you need to do a very repetitve task more than a few times in a row. It'll be worth setting up a Selenium script to do it for you. One click can handle an entire series of browser interactions.
+
+      --
+
+      Client side testing for site can be difficult to achieve without writing test suites in code and learning acceptance testing frameworks.
+
+      --
+
+      * Selenium can record a series of actions as a test. You can put multiple tests together to create a suite.
+
+      --
+
+      * The entire suite can be exported and saved as code, sent to your colleague or boss, and they can run the suite to see that the site you built works as it should.
+
+      --
+
+      * And you never had to write a line of code.
+
+      --
+
+      Check out http://www.seleniumhq.org/projects/ide/ for more information!
+
+      ---
+
+      name: express
+
+      # Express #
+
+      _Fast, unopinionated, minimalist web framework for Node.js_
+
+      Express is a good framework for building APIs or services in Node.
+
+      --
+
+      * Routing is easy being at the forefront of the framework.
+
+      --
+
+      * With node's increasing ability to run jobs on your server, it's common to put up a small Express app that listens for a certain request and triggers a process.
+
+      --
+
+      * You can even make sure your node/Express app runs [forever](https://github.com/foreverjs/forever).
+
+      --
+
+      * The lack of opinionation and the minimalism can make really complicated web services difficult to maintain. You might want a fuller, opinionated, MVC framework for this ([Sailsjs](http://sailsjs.org))
+
+      --
+
+      * Doesn't include components of the framework you might find necessary, like an Object Relational Mapper.
+
+      --
+
+      Check it out at: http://expressjs.com/
+
+      ---
+
+      name: jekyll-1
+
+      # Jekyll #
+
+      _Simple static site generator_
+
+      [Jekyll](http://jekyllrb.com) is a command line tool that helps you turn a set [Liquid](https://github.com/Shopify/liquid/wiki) templates and markdown files into a completely static HTML site.
+
+      --
+
+      * Jekyll includes Sass, so it'll parse and compile your SCSS files for you.
+
+      --
+
+      * Pages have YAML Front Matter for managing page metadata.
+
+      --
+
+      * Jekyll handles posts like you would expect a blog to, but it also handles custom datasets in a similar way.
+
+      --
+
+      * Deployment is dead simple because your site is _just a folder_. And you can make it easier with [jekyll-hook](https://github.com/developmentseed/jekyll-hook). It's literally automated deployment.
+
+      ---
+
+      name: jekyll-2
+
+      # So now for that Drupal edge case . . . #
+
+      We've talked about how Drupal is overkill for a small, static site that will only be updated by web developers.
+
+      --
+
+      However, Jekyll is perfect for this use case:
+
+      --
+
+      * There are no secuity updates. It's all static.
+
+      --
+
+      * There's less performance overhead. PHP doesn't interpret anything.
+
+      --
+
+      * No database is required. Save those resources for more critical things.
+
+      --
+
+      * As long as you have your Jekyll site under version control, there's no reason to have automatic backups for it.
+
+      --
+
+      Have a department IT blog? Jekyll can handle that without a problem.
+
+      ---
+
+      name: questions
+      class: middle, center
+
+      # Questions? Discussion? #
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
